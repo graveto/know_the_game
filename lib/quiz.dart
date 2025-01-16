@@ -5,12 +5,12 @@ class Quiz extends StatefulWidget {
   const Quiz({super.key});
 
   @override
-  State<StatefulWidget> createState() {
+  State<Quiz> createState() {
     return _Quiz();
   }
 }
 
-class _Quiz extends State {
+class _Quiz extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
