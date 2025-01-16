@@ -12,9 +12,10 @@ class StartScreen extends StatelessWidget {
           Image.asset(
             'assets/images/quiz-logo.png',
             width: 300,
+            color: const Color.fromARGB(125, 255, 255, 255),
           ),
           const SizedBox(
-            height: 20,
+            height: 80,
           ),
           const Text(
             'Learn Halo: Flashpoint the Fun Way!',
@@ -24,16 +25,17 @@ class StartScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          OutlinedButton(
-            onPressed: null,
-            style: OutlinedButton.styleFrom().copyWith(
-              side: WidgetStateProperty.all(
-                const BorderSide(color: Colors.white),
+          OutlinedButton.icon(
+            onPressed: () {},
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.white,
+              side: const BorderSide(
+                color: Colors.white,
               ),
             ),
-            child: const Text(
+            icon: const Icon(Icons.arrow_right_alt),
+            label: const Text(
               'Start Quiz',
-              style: TextStyle(color: Colors.white),
             ),
           )
         ],
