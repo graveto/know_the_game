@@ -70,4 +70,13 @@ const questions = [
       'Entire gang can be special.',
     ],
   ),
+  QuizQuestion(
+    'Walking Fire',
+    [
+      'A penalty to Rapid actions when targeting multiple models. ',
+      'Gang member that is hot.',
+      'Can be opposed with Running Water.',
+      '1 dice bonus to Rapid actions.',
+    ],
+  ),
 ];
