@@ -22,9 +22,11 @@ class AnswerButton extends StatelessWidget {
           39,
         ),
         foregroundColor: Colors.white,
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40)
       ),
       child: Text(
         answerText,
+        textAlign: TextAlign.left,
         style: const TextStyle(
           fontSize: 16,
         ),
