@@ -17,13 +17,18 @@ class AnswerButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: const Color.fromARGB(
           255,
-          88,
-          178,
-          189,
+          221,
+          32,
+          39,
         ),
         foregroundColor: Colors.white,
       ),
-      child: Text(answerText),
+      child: Text(
+        answerText,
+        style: const TextStyle(
+          fontSize: 16,
+        ),
+      ),
     );
   }
 }

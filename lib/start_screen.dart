@@ -14,13 +14,12 @@ class StartScreen extends StatelessWidget {
           Image.asset(
             'assets/images/quiz-logo.png',
             width: 300,
-            color: const Color.fromARGB(125, 255, 255, 255),
           ),
           const SizedBox(
             height: 80,
           ),
           const Text(
-            'Learn Halo: Flashpoint the Fun Way!',
+            'Prepare for the Zone!',
             style: TextStyle(
                 color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
           ),
@@ -37,7 +36,7 @@ class StartScreen extends StatelessWidget {
             ),
             icon: const Icon(Icons.arrow_right_alt),
             label: const Text(
-              'Start Quiz',
+              'Start Training',
             ),
           )
         ],
