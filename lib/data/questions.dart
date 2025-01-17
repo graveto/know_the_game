@@ -43,4 +43,31 @@ const questions = [
       'All the ammo is used up. Can\'t fire.',
     ],
   ),
+  QuizQuestion(
+    'Size of a Game',
+    [
+      '100 to 200 EB',
+      '1000 Latinum',
+      'It\'s not a game. It\'s life',
+      '5 Gold',
+    ],
+  ),
+  QuizQuestion(
+    'Street Cred',
+    [
+      'The measure of team\'s or character\'s reputation.',
+      'How much credit you can spend on a character.',
+      'Only for certain gangs.',
+      'Unlimited.',
+    ],
+  ),
+  QuizQuestion(
+    'Specialist',
+    [
+      'Your team may only include one of this model (but may include other Specialist models).',
+      'No one is special. Everyone is disposable.',
+      'Only one per gang.',
+      'Entire gang can be special.',
+    ],
+  ),
 ];

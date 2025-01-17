@@ -20,7 +20,7 @@ class StartScreen extends StatelessWidget {
             height: 80,
           ),
           Text(
-            'Prepare for the Zone!',
+            'Get in the Zone!',
             style: GoogleFonts.audiowide(
               color: Colors.white,
               fontSize: 25,
