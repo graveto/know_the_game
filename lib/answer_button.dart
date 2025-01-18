@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AnswerButton extends StatelessWidget {
   const AnswerButton({
@@ -35,7 +36,8 @@ class AnswerButton extends StatelessWidget {
       child: Text(
         answerText,
         textAlign: TextAlign.left,
-        style: const TextStyle(
+        style: GoogleFonts.audiowide(
+          color: Colors.white,
           fontSize: 16,
         ),
       ),
