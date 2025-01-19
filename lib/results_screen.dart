@@ -81,11 +81,13 @@ class ResultsScreen extends StatelessWidget {
                 foregroundColor: Colors.white,
               ),
               icon: const Icon(Icons.refresh),
-              label: Text('Get Back to Training!',
+              label: Text(
+                'Get Back to Training!',
                 style: GoogleFonts.audiowide(
                   color: const Color.fromARGB(255, 230, 200, 253),
                   fontSize: 18,
-                ),),
+                ),
+              ),
             )
           ],
         ),

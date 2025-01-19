@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:not_my_first_app/quiz_button.dart';
+import 'package:not_my_first_app/search_button.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen(this.switchScreen,{super.key});
@@ -12,9 +14,14 @@ class StartScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset(
-            'assets/images/quiz-logo.png',
-            width: 300,
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20.0),
+            child: Image.asset(
+              'assets/images/quiz-logo.png',
+              fit: BoxFit.fill,
+              colorBlendMode: BlendMode.screen,
+              width: 300,
+            ),
           ),
           const SizedBox(
             height: 80,
@@ -30,6 +37,11 @@ class StartScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
+          const SearchButton(),
+          const SizedBox(
+            height: 20,
+          ),
+          // const QuizButton(),
           OutlinedButton.icon(
             onPressed: switchScreen,
             style: OutlinedButton.styleFrom(
@@ -40,14 +52,14 @@ class StartScreen extends StatelessWidget {
             ),
             icon: const Icon(Icons.arrow_right_alt),
             label: Text(
-              'Start Training',
+              'I Know Kung Fu',
               style: GoogleFonts.audiowide(
                 color: Colors.white,
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
             ),
-          )
+          ),
         ],
       ),
     );
