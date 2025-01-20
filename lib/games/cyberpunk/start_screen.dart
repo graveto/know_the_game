@@ -23,7 +23,7 @@ class StartScreen extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(20.0),
             child: Image.asset(
-              'assets/images/quiz-logo.png',
+              'assets/images/cyberpunk.png',
               fit: BoxFit.fill,
               colorBlendMode: BlendMode.screen,
               width: 300,
