@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:not_my_first_app/cyberpunk/quiz.dart' as cyberpunk;
 import 'package:not_my_first_app/halo/quiz.dart' as halo;
+import 'package:not_my_first_app/shatterpoint/quiz.dart' as shatterpoint;
 
 class GameGallery extends StatelessWidget {
   const GameGallery({super.key});
@@ -67,6 +68,34 @@ class GameGallery extends StatelessWidget {
                 ),
                 label: Text(
                   'Halo',
+                  style: GoogleFonts.audiowide(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              OutlinedButton.icon(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const shatterpoint.Quiz(),
+                    ),
+                  );
+                },
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  side: const BorderSide(
+                    color: Colors.white,
+                  ),
+                ),
+                icon: const Icon(
+                  Icons.arrow_right_alt,
+                  color: Colors.white,
+                ),
+                label: Text(
+                  'Shatterpoint',
                   style: GoogleFonts.audiowide(
                     color: Colors.white,
                     fontSize: 16,
