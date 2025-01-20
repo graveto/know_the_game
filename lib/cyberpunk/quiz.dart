@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:not_my_first_app/start_screen.dart';
-import 'package:not_my_first_app/questions_screen.dart';
-import 'package:not_my_first_app/data/questions.dart';
-import 'package:not_my_first_app/results_screen.dart';
+import 'package:not_my_first_app/cyberpunk/start_screen.dart';
+import 'package:not_my_first_app/cyberpunk/questions_screen.dart';
+import 'package:not_my_first_app/cyberpunk/data/questions.dart';
+import 'package:not_my_first_app/cyberpunk/results_screen.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
@@ -43,7 +43,11 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(context) {
-    Widget screenWidget = StartScreen(switchScreen);
+    Widget screenWidget = StartScreen(
+      switchScreen,
+      onSelectAnswer: chooseAnswer,
+      onRestart: restartQuiz,
+    );
 
     if (activeScreen == 'questions-screen') {
       screenWidget = QuestionsScreen(
@@ -59,22 +63,28 @@ class _QuizState extends State<Quiz> {
       );
     }
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 2, 2, 25 ),
-                Color.fromARGB(255, 72, 18, 64),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: screenWidget,
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 2, 2, 25),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
+      ),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color.fromARGB(255, 2, 2, 25),
+              Color.fromARGB(255, 72, 18, 64),
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: screenWidget,
       ),
     );
   }

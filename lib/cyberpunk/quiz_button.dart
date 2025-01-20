@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:not_my_first_app/questions_screen.dart';
-import 'package:not_my_first_app/test_widget.dart';
-import 'definition_search_widget.dart'; // Import the DefinitionSearchWidget
+import 'package:not_my_first_app/cyberpunk/questions_screen.dart';
+import 'package:not_my_first_app/cyberpunk/definition_search_widget.dart'; // Import the DefinitionSearchWidget
+import 'package:not_my_first_app/cyberpunk/quiz.dart';
 
 class QuizButton extends StatelessWidget {
-  const QuizButton({super.key});
+  const QuizButton({super.key, required this.onSelectAnswer, required this.onRestart});
+
+  final void Function(String answer) onSelectAnswer;
+  final void Function() onRestart;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +17,7 @@ class QuizButton extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-              // builder: (context) => const TestWidget()),
-              builder: (context) => const TestWidget()),
+              builder: (context) => QuestionsScreen(onSelectAnswer: onSelectAnswer, onRestart: onRestart)),
         );
       },
       style: OutlinedButton.styleFrom(

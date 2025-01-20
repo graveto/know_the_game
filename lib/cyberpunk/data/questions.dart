@@ -1,4 +1,4 @@
-import 'package:not_my_first_app/models/quiz_question.dart';
+import 'package:not_my_first_app/cyberpunk/models/quiz_question.dart';
 
 const questions = [
   QuizQuestion(

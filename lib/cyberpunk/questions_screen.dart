@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:not_my_first_app/answer_button.dart';
-import 'package:not_my_first_app/data/questions.dart';
+import 'package:not_my_first_app/cyberpunk/answer_button.dart';
+import 'package:not_my_first_app/cyberpunk/data/questions.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuestionsScreen extends StatefulWidget {

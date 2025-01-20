@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:not_my_first_app/data/questions.dart';
+import 'package:not_my_first_app/cyberpunk/data/questions.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:not_my_first_app/questions_summary/questions_summary.dart';
+import 'package:not_my_first_app/cyberpunk/questions_summary/questions_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({

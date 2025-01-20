@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:not_my_first_app/quiz_button.dart';
-import 'package:not_my_first_app/search_button.dart';
+import 'package:not_my_first_app/cyberpunk/quiz_button.dart';
+import 'package:not_my_first_app/cyberpunk/search_button.dart';
+import 'package:not_my_first_app/cyberpunk/quiz.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen(this.switchScreen,{super.key});
+  const StartScreen(this.switchScreen,
+      {super.key, required this.onSelectAnswer, required this.onRestart});
 
   final void Function() switchScreen;
+
+  final void Function(String answer) onSelectAnswer;
+
+  final void Function() onRestart;
 
   @override
   Widget build(BuildContext context) {
@@ -41,24 +47,9 @@ class StartScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          // const QuizButton(),
-          OutlinedButton.icon(
-            onPressed: switchScreen,
-            style: OutlinedButton.styleFrom(
-              foregroundColor: Colors.white,
-              side: const BorderSide(
-                color: Colors.white,
-              ),
-            ),
-            icon: const Icon(Icons.arrow_right_alt),
-            label: Text(
-              'I Know Kung Fu',
-              style: GoogleFonts.audiowide(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+          QuizButton(
+            onSelectAnswer: onSelectAnswer,
+            onRestart: onRestart,
           ),
         ],
       ),
