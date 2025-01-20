@@ -1,4 +1,4 @@
-# not_my_first_app
+# know_the_game
 
 A new Flutter project.
 

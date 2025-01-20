@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="not_my_first_app"
+        android:label="know_the_game"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

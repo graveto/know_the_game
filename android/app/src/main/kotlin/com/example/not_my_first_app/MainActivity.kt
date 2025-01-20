@@ -1,4 +1,4 @@
-package com.example.not_my_first_app
+package com.example.know_the_game
 
 import io.flutter.embedding.android.FlutterActivity
 

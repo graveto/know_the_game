@@ -1,6 +1,6 @@
 {
-    "name": "not_my_first_app",
-    "short_name": "not_my_first_app",
+    "name": "know_the_game",
+    "short_name": "know_the_game",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
