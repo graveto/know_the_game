@@ -16,18 +16,18 @@ class ImageOnlyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        return SizedBox(
-          height: 150,
-          width: width,
-          child: AspectRatio(
-            aspectRatio: 1,
+        return Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SizedBox(
+            height: 100,
+            width: width,
             child: InkWell(
               onTap: onPressed,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20.0),
-                child: Ink.image(
-                  image: AssetImage(imagePath),
-                  fit: BoxFit.contain,
+                child: Image.asset(
+                  imagePath,
+                  fit: BoxFit.fill,
                   width: width,
                 ),
               ),

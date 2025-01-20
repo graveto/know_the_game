@@ -19,16 +19,16 @@ const games = [
   Game(
     'Star Wars: Unlimited',
     'unlimited',
-    'assets/images/cyberpunk.png',
+    'assets/images/unlimited.png',
   ),
   Game(
     'Gundam Card Game',
     'gundamcg',
-    'assets/images/cyberpunk.png',
+    'assets/images/gundamcg.png',
   ),
   Game(
     'Gundam Assemble',
     'assemble',
-    'assets/images/cyberpunk.png',
+    'assets/images/assemble.png',
   )
 ];

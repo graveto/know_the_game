@@ -23,74 +23,80 @@ class GameGallery extends StatelessWidget {
       body: SizedBox(
         width: double.infinity,
         child: Container(
+          alignment: Alignment.center,
           margin: const EdgeInsets.all(40),
-          child: SingleChildScrollView(
-            child: Column(
-                // crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  ...games.map((game) {
-                    return ImageOnlyButton(
-                      imagePath: game.imagePath,
-                      onPressed: () {
-                        switch (game.importPath) {
-                          case 'cyberpunk':
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const cyberpunk.Quiz(),
-                              ),
-                            );
-                            break;
-                          case 'halo':
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const halo.Quiz(),
-                              ),
-                            );
-                          case 'shatterpoint':
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const shatterpoint.Quiz(),
-                              ),
-                            );
-                            break;
-                          case 'unlimited':
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const unlimited.Quiz(),
-                              ),
-                            );
-                            break;
-                          case 'gundamcg':
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const gundamcg.Quiz(),
-                              ),
-                            );
-                            break;
-                          case 'assemble':
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const assemble.Quiz(),
-                              ),
-                            );
-                            break;
-                          default:
-                            throw Exception(
-                                'Unknown game import path: ${game.importPath}');
-                        }
-                      },
-                      width: 300,
-                    );
-                  })
-                ]
-                ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SingleChildScrollView(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ...games.map((game) {
+                        return ImageOnlyButton(
+                          imagePath: game.imagePath,
+                          onPressed: () {
+                            switch (game.importPath) {
+                              case 'cyberpunk':
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const cyberpunk.Quiz(),
+                                  ),
+                                );
+                                break;
+                              case 'halo':
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const halo.Quiz(),
+                                  ),
+                                );
+                              case 'shatterpoint':
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const shatterpoint.Quiz(),
+                                  ),
+                                );
+                                break;
+                              case 'unlimited':
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const unlimited.Quiz(),
+                                  ),
+                                );
+                                break;
+                              case 'gundamcg':
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const gundamcg.Quiz(),
+                                  ),
+                                );
+                                break;
+                              case 'assemble':
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const assemble.Quiz(),
+                                  ),
+                                );
+                                break;
+                              default:
+                                throw Exception(
+                                    'Unknown game import path: ${game.importPath}');
+                            }
+                          },
+                          width: 250,
+                        );
+                      })
+                    ]
+                    ),
+              ),
+            ],
           ),
         ),
       ),
